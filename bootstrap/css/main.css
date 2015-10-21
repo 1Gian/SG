@@ -1,0 +1,9 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+h1{
+	font-size: 100%;
+	background-color: yellow;
+}
+
+.glyphicon-comment {
+	font-size: 60px;
+}
