@@ -286,3 +286,103 @@ button {
 .card--small .card__action-bar {
   left: 88px;
 }
+
+
+/**background image**/
+
+
+
+/**
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGNbE_oMaV8t2eFeISPpzbdE.woff) format('woff');
+}
+
+body {
+  background-color: #5E6167;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+}
+h1 {
+  font-weight: 200;
+  color: #ffffff;
+  padding-bottom: 20px;
+}
+.button {
+  background-color: #000;
+  padding: 7px;
+  padding-left: 35px;
+  padding-right: 35px;
+  border-radius: 100px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  opacity: 0.6;
+  transition: all 0.25s;
+}
+.button:hover {
+  opacity: 0.8;
+}
+.container {
+  width: 480px;
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+}
+.image {
+  background-image: url('http://mac.carrithers.me/i/kanyeblue.png');
+  width: 480px;
+  height: 250px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 60px;
+  padding-top: 30px;
+  background-position: bottom;
+}
+.image:before {
+  position: absolute;
+  width: 220px;
+  left: 0;
+  bottom: 0;
+  border-bottom: 20px solid white;
+  border-right: 20px solid transparent;
+  display: block;
+  content:" ";
+}
+.image:after {
+  position: absolute;
+  left: 240px;
+  bottom: 0;
+  right: 0;
+  border-bottom: 20px solid white;
+  border-left: 20px solid transparent;
+  display: block;
+  content:" ";
+}
+.text {
+  text-align: left;
+  font-family: 'Source Sans Pro';
+  background-color: white;
+  box-sizing: border-box;
+  padding: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1.5em;
+}
+.text span {
+  background-color: #ccc;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
