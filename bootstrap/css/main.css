@@ -56,7 +56,7 @@ body {
   border: none;
   background: transparent;
 }**/
-.controller-container1 {
+.controller-container {
 	 margin-top: 0;
   margin-bottom: 700px;
   text-align: top;
@@ -105,7 +105,7 @@ body {
 .card {
   will-change: transform;
   margin: 8px;
-  position:fixed;
+  position: relative;
   border-radius: 2px;
   overflow: hidden;
   background-color: #fafafa;
@@ -115,7 +115,8 @@ body {
           transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
   left: 30px;
-  top: 200px;
+  top: 5px;
+  bottom:100px; 
 }
 .card:hover {
   cursor: pointer;
@@ -355,7 +356,7 @@ body {
 
 .logo{
 
-	position: fixed;
+	position: relative;
     top: 0;
     left: 30px;
     top: 20px;
@@ -434,6 +435,8 @@ p {
   height: 260px;
   margin: 10px 0 10px 4%;
   background: #fff;
+  bottom: 150%;
+
   
   /* Set the depth of the elements */
   -webkit-perspective: 800px;
@@ -446,11 +449,14 @@ p {
   margin-left: 0;
 }
 
-.card {
+.card2 {
   width: 100%;
   height: 100%;
   position: absolute;
   cursor: pointer;
+
+
+
   
   /* Set the transition effects */
   -webkit-transition: -webkit-transform 0.4s;
