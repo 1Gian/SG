@@ -1,12 +1,47 @@
 /**@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"); **/
+/*bck-img**/
+/**img.bg {
+  /* Set rules to fill background 
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+*/
+
+body { 
+  background: url(img/Zahara2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+
+/*  */
+
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,700,300);
 :root {
   -webkit-transition: all 300ms;
           transition: all 300ms;
 }
-:root.bg--big {
-  background-color: #00BCD4;
+:root.bg--medium {
+  background-color: #35e539;
 }
 :root.bg--big {
   background-color: #E53935;
@@ -43,9 +78,15 @@ body {
   background: transparent;
 }**/
 .controller-container {
-  margin-bottom: 5%;
-  text-align: center;
-}
+	 margin-top: 0;
+  margin-bottom: 630px;
+  text-align: top;
+   text-align: bottom;
+   right: 80%;
+ 
+ }
+
+
 .controller {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -56,6 +97,7 @@ body {
   font-size: 22px;
   padding: 10px 0;
   color: #FFF;
+
   position: relative;
   -webkit-transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
           transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -69,7 +111,7 @@ body {
   width: 0;
   -webkit-transition: all 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
           transition: all 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  background-color: #FFF;
+  background-color: #000;
 }
 .controller.is_current:after {
   width: 100%;
@@ -83,15 +125,17 @@ body {
 .card {
   will-change: transform;
   margin: 8px;
-  position: relative;
+  position:fixed;
   border-radius: 2px;
   overflow: hidden;
   background-color: #fafafa;
-  height: 90%;
-  width: 700px;
+  height: 100%;
+  width: 650px;
   -webkit-transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
           transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+  left: 30px;
+  top: 200px;
 }
 .card:hover {
   cursor: pointer;
@@ -127,7 +171,7 @@ body {
       -ms-user-select: none;
           user-select: none;
   font-size: 24px;
-  color: #FFF;
+  color: #000000;
   margin: 0;
   position: absolute;
   left: 0;
@@ -139,6 +183,7 @@ body {
   overflow: hidden;
   -webkit-transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
           transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
 }
 .card__subtitle {
   -webkit-user-select: none;
@@ -150,7 +195,7 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  color: #000;
+  color: #000000;
   left: 88px;
   right: 0;
   top: 45px;
@@ -174,7 +219,7 @@ body {
   margin: 0;
   line-height: 1.6;
   position: absolute;
-  color: #000;
+  color: #000000;
   overflow: hidden;
   -webkit-transition: width 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
           transition: width 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -251,6 +296,7 @@ body {
 .card--medium .card__text {
   font-size: 16px;
   top: 50px;
+
 }
 .card--medium .card__action-bar {
   left: 0;
@@ -323,6 +369,20 @@ body {
 .cont {
   text-align: center;
 }
+
+
+/** Div class nav bar logo **/
+
+.logo{
+
+	position: fixed;
+    top: 0;
+    left: 30px;
+    top: 20px;
+    border: 3px
+
+}
+
 
 
 
