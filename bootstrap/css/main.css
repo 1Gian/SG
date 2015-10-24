@@ -66,11 +66,12 @@ body {
 .controller-container {
 	 /*margin-top: 20px;*/
 	 top: 5%;
-  margin-bottom: -15px;
+  margin-bottom: -40px;
   text-align: top;
    text-align: bottom;
    padding-left: 70%;
-   padding-bottom: 20px;
+   padding-bottom: 40;
+   padding-top: 25px;
 
 
  
@@ -218,7 +219,7 @@ body {
   -webkit-transition: delay 0.1s;
           transition: delay 0.1s;
 }
-/**.card__action-bar {
+.card__action-bar {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -236,8 +237,8 @@ body {
           transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-**/
-/**.card__button {
+
+.card__button {
   outline: none;
   position: relative;
   display: inline-block;
@@ -245,7 +246,7 @@ body {
   padding: 0 16px;
   color: #ff1744;
 }
-**/
+
 .card--big {
   box-shadow: 0 30px 66px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
   height: 50px;
@@ -451,7 +452,7 @@ p {
   width: 48%;
   height: 260px;
   margin: 10px 0 10px 4%;
-  background: #fff;
+  background: #ffff00;
   bottom: 150%;
 
   
