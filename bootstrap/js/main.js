@@ -158,3 +158,12 @@
 		document.addEventListener("click", click, false);
 	}
 }());
+
+
+
+/**cards part 2 **/
+
+
+$('.card').click(function() {
+  $(this).toggleClass('flipped');
+});
