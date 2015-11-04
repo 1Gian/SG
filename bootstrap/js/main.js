@@ -161,9 +161,18 @@
 
 
 
-/**cards part 2 **/
+/**cards part 2 
 
 
 $('.card').click(function() {
   $(this).toggleClass('flipped');
+
+});
+**/
+
+/** TRIAL CARDS PART 2B **/
+
+$('.flip').click(function(e){
+  $(this).find('.card').toggleClass('flipped');
+  e.preventDefault();
 });
