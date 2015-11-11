@@ -369,7 +369,7 @@ body {
 }
 
 
-/** Div class nav bar logo **/
+/** Div class nav bar logo 
 
 .logo{
 
@@ -381,202 +381,178 @@ body {
 
 }
 
-
-
-
-/**cards part 2**/
-
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
-
-/**
-body {
-  font-family: 'Roboto Slab', serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.4em;
-  color: #333;
-  background: #eee;
-}
 **/
 
-/**Testing
 
+/**cards part 2 
 
-input,
-button {
-  font-family: 'Roboto Slab', serif;
-  font-weight: 300;
-  font-size: 16px;
-  border: 0;
-  padding: 3px 5px;
-  border-radius: 3px;
-}
+@import compass/css3 
 
-h1 {
-  margin: 0.5em 0 1em 0;
-  font-size: 1.8em;
-  font-weight: 700;
-  color: #096AA3;
-}
+$tundora: #444444
+$white: #fff
+$gallery: #eee
+$de_york: #8c8
+$mountain_mist: #999
+$black_14: rgba(0, 0, 0, 0.14)
+$bismark: #506a85
+$storm_dust: #666666
 
-h2, h3 {
-  font-weight: bold;
-}
+*
+    +box-sizing(border-box)
 
-p {
-  margin-bottom: 1em;
-}
+body
+    padding-top: 50px
+    padding-bottom: 20px
+    background: $tundora
+**/
+.faint
+    color: $mountain_mist
 
-.animation {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
+.fa
+    font-size: 5em
+    text-align: center
+    padding: 20px
 
-.wrapper {
-  width: 80%;
-  padding: 4%;
-  margin: 20px auto;
-  background: #fff;
-}
+.btn
+    &:hover
+        outline: 0 !important
+    &:focus
+        outline: 0 !important
+    &:active
+        outline: 0 !important
 
-.wrapper.cards {
-  background: 0;
-  width: 88%;
-  padding: 20px 0 0 0;
-}
+.btn-download
+    height: 50px
+    text-align: center
+    margin-top: 40px
+    font-size: 1.7em
 
-.container {
-  position: relative;
-  float: left;
-  width: 48%;
-  height: 260px;
-  margin: 10px 0 10px 4%;
-  background: #fff;
-  bottom: 150%;
+.btn-flip-extend
+    background-color: transparent
+    +box-shadow(none)
+    opacity: 1
 
-  
-  /* Set the depth of the elements 
-  -webkit-perspective: 800px;
-  -moz-perspective: 800px;
-  -o-perspective: 800px;
-  perspective: 800px;
-}
+.btn-flip
+    opacity: 0.8
+    color: $storm_dust
+    background-color: transparent
+    &:hover
+        @extend .btn-flip-extend
+    &:focus
+        @extend .btn-flip-extend
+    i
+        font-size: 16px
 
-.container:first-child {
-  margin-left: 0;
-}
+.card-holder
+    margin-top: 50px
 
-.card2 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  cursor: pointer;
+.card-container
+    +perspective(800px)
+    +transform-style(preserve-3d)
+    +border-radius(4px)
+    margin-bottom: 30px
+    width: 100%
+    height: 420px
+    &:not(.manual-flip):hover
+        .front
+            +transform(rotateY(180deg))
+        .back
+            +transform(rotateY(0deg))
+    &.hover.manual-flip
+        .front
+            +transform(rotateY(180deg))
+        .back
+            +transform(rotateY(0deg))
 
+.card
+    +transform-style(preserve-3d)
+    +border-radius(4px)
+    +transition(transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275))
+    position: relative
+    background: none repeat scroll 0 0 $white
+    color: $tundora
+    .cover
+        +border-radius(4px 4px 0 0)
+        height: 105px
+        overflow: hidden
+        z-index: -2
+        img
+            width: 100%
+    .branded
+        position: relative
+        background: $white
+        +border-radius(50%)
+        display: block
+        height: 120px
+        margin: (-55px) auto 0
+        width: 120px
+        text-align: center
+    .content
+        background-color: rgba(0, 0, 0, 0)
+        +box-shadow(none)
+        padding: 10px 20px 20px
+        .main
+            min-height: 140px
+    .use-for
+        font-size: 22px
+        text-align: center
+    h5
+        margin: 5px 0
+        font-weight: 400
+        line-height: 20px
+    .footer
+        color: $mountain_mist
+        padding: 10px 0 0
+        text-align: center
+        .btn-simple
+            margin-top: -6px
+    .header
+        padding: 15px 20px
+        height: 90px
+    .back .content .main
+        height: 215px
 
+.front
+    +backface-visibility(hidden)
+    +transition(transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275))
+    +transform-style(preserve-3d)
+    +transform(rotateY(0deg))
+    +box-shadow(0 1px 3px 0 $black_14)
+    +border-radius(4px)
+    position: absolute
+    background-color: $white
+    width: 100%
+    height: 420px
+    top: 0
+    left: 0
+    z-index: 2
 
-  
-  /* Set the transition effects 
-  -webkit-transition: -webkit-transform 0.4s;
-  -moz-transition: -moz-transform 0.4s;
-  -o-transition: -o-transform 0.4s;
-  transition: transform 0.4s;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
+.back
+    +backface-visibility(hidden)
+    +transition(transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275))
+    +transform-style(preserve-3d)
+    +transform(rotateY(-180deg))
+    +box-shadow(0 1px 3px 0 $black_14)
+    +border-radius(4px)
+    position: absolute
+    background-color: $white
+    width: 100%
+    height: 420px
+    top: 0
+    left: 0
+    .btn-simple
+        position: absolute
+        left: 0
+        bottom: 4px
 
-.card2.flipped {
-  -webkit-transform: rotateY( 180deg );
-  -moz-transform: rotateY( 180deg );
-  -o-transform: rotateY( 180deg );
-  transform: rotateY( 180deg );
-}
+.qr canvas
+    +backface-visibility(hidden)
+    margin: 0 auto
 
-.card2 .front,
-.card2 .back {
-  display: block;
-  height: 100%;
-  width: 100%;
-  line-height: 260px;
-  color: white;
-  text-align: center;
-  font-size: 4em;
-  position: absolute;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
-  
-  box-shadow: 3px 5px 20px 2px rgba(0, 0, 0, 0.25);
-}
-
-.card2 .back {
-  width: 94%;
-  padding-left: 3%;
-  padding-right: 3%;
-  font-size: 16px;
-  text-align: left;
-  line-height: 25px;
-}
-
-.formItem:first-child {
-  margin-top: 20px;
-}
-
-.card2 .back label {
-  display: inline-block;
-  width: 70px;
-  text-align: left;
-}
-
-.card2 .front {
-  background: #096AA3;
-}
-
-.card2 .back {
-  background: #03446A;
-  -webkit-transform: rotateY( 180deg );
-  -moz-transform: rotateY( 180deg );
-  -o-transform: rotateY( 180deg );
-  transform: rotateY( 180deg );
-}
-
-.container:first-child .card2 .front {
-  background: #228653;
-}
-
-.container:first-child .card2 .back {
-  background: #007539;
-}
-
-.card2Title {
-  font-size: 1.4em;
-  line-height: 1.2em;
-  margin: 0;
-}
-
-.content {
-  padding: 4%;
-  font-weight: 100;
-  text-align: left;
-}
-
-button.btnSend {
-  display: inline-block;
-  min-width: 100px;
-  padding: 3px 5px;
-  margin-top: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  color: #03446A;
-  background: #fff;
-  border: 0;
-  border-radius: 0;
-}
-
-*/
+.title
+    color: $bismark
+    text-align: center
+    font-weight: 300
+    font-size: 44px
+    margin-bottom: 90px
+    line-height: 90%
